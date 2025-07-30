@@ -1,0 +1,22 @@
+.cat-container {
+  display: contents;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translate(-100px, -2000px);
+  }
+}
+
+.levitating-cat {
+  animation: levitate 2000ms;
+  transform: translateY(-2000px);
+}
