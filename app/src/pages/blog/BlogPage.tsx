@@ -15,11 +15,28 @@ function BlogPage() {
   if (isError) {
     return <div>{error.message}</div>;
   }
+  if (typeof data === "undefined") {
+    return <p>Error</p>;
+  }
+
   return (
-    <div className="blog-post-container">
-      <h2 className="blog-post-title">{data[0].title}</h2>
-      <p>{data[0].text}</p>
-    </div>
+    <>
+      {data.map((blogPost) => {
+        console.log(blogPost);
+        console.log("Ma");
+        console.log("oiia", blogPost.body[1]);
+
+        return (
+          <div className="blog-post-container" key={blogPost.title}>
+            <h2 className="blog-post-title">{blogPost.title}</h2>
+
+            {blogPost.body.map((paragraph) => {
+              return <p>{paragraph}</p>;
+            })}
+          </div>
+        );
+      })}
+    </>
   );
 }
 
