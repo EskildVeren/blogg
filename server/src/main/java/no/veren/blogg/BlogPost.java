@@ -1,4 +1,6 @@
 package no.veren.blogg;
 
-public record BlogPost(String title, String text) {
+import java.util.List;
+
+public record BlogPost(String title, List<String> body) {
 }

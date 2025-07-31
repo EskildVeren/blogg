@@ -26,7 +26,7 @@ public class BlogPostController {
             return service.getAllBlogPosts();
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
-            return Arrays.asList(new BlogPost("En feil har skjedd", "En slitsom feil..."));
+            return Arrays.asList(new BlogPost("En feil har skjedd", Arrays.asList("En slitsom feil...")));
         }
     }
 }

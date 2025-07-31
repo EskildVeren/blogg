@@ -20,13 +20,13 @@ public class BlogPostRepository {
 
     public BlogPost readTxtFile(String filename) throws FileNotFoundException {
         String title = filename;
-        String body = "";
+        List<String> body = new ArrayList<>();
 
         String path = "./blogPosts/" + title + ".txt";
         File file = new File(path);
         Scanner scanner = new Scanner(file);
         while (scanner.hasNextLine()) {
-            body = body + scanner.nextLine() + "\n";
+            body.add(scanner.nextLine());
         }
 
         scanner.close();
