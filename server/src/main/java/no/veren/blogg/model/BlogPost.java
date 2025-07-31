@@ -1,4 +1,4 @@
-package no.veren.blogg;
+package no.veren.blogg.model;
 
 import java.util.List;
 

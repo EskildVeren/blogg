@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import no.veren.blogg.BlogPost;
+import no.veren.blogg.model.BlogPost;
 import no.veren.blogg.repository.BlogPostRepository;
 
 @Service

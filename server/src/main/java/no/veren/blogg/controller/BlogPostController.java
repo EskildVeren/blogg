@@ -1,4 +1,4 @@
-package no.veren.blogg;
+package no.veren.blogg.controller;
 
 import java.io.FileNotFoundException;
 import java.util.Arrays;
@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import no.veren.blogg.model.BlogPost;
 import no.veren.blogg.service.BlogPostService;
 
 @RestController

@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import org.springframework.stereotype.Repository;
 
-import no.veren.blogg.BlogPost;
+import no.veren.blogg.model.BlogPost;
 
 @Repository
 public class BlogPostRepository {
