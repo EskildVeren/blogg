@@ -1,3 +1,4 @@
+import Navbar from "../../components/Navbar";
 import ProjectSection, { type ProjectEntry } from "./components/ProjectSection";
 import ResumeSection from "./components/ResumeSection";
 import {
@@ -10,6 +11,7 @@ import {
 function ResumePage() {
   return (
     <>
+      <Navbar />
       <ProjectSection projects={getMockProjects()} />
       <ResumeSection
         resumeData={getEducation()}

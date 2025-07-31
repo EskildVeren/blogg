@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
-import { getPosts } from "./api";
+import { getPosts } from "./lib/api";
 import "./style.css";
+import Navbar from "../../components/Navbar";
 
 function BlogPage() {
   const { isPending, isError, data, error } = useQuery({
@@ -21,6 +22,7 @@ function BlogPage() {
 
   return (
     <>
+      <Navbar />
       {data.map((blogPost) => {
         console.log(blogPost);
         console.log("Ma");
