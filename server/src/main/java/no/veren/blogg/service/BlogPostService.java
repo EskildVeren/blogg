@@ -19,4 +19,8 @@ public class BlogPostService {
     public List<BlogPost> getAllBlogPosts() throws FileNotFoundException {
         return repository.readAllTxtBlogPosts();
     }
+
+    public BlogPost getBlogPost(String title) throws FileNotFoundException {
+        return repository.readTxtBlogPost(title);
+    }
 }

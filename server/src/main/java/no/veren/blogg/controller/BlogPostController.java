@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import no.veren.blogg.model.BlogPost;
@@ -28,6 +29,16 @@ public class BlogPostController {
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
             return Arrays.asList(new BlogPost("En feil har skjedd", Arrays.asList("En slitsom feil...")));
+        }
+    }
+
+    @GetMapping(value = "/posts/{blogPostTitle}")
+    public BlogPost getBlogPost(@PathVariable String blogPostTitle) {
+        try {
+            return service.getBlogPost(blogPostTitle);
+        } catch (FileNotFoundException e) {
+            System.out.println(e.getMessage());
+            return new BlogPost("En feil har skjedd", Arrays.asList("En slitsom feil..."));
         }
     }
 }

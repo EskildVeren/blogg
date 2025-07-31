@@ -25,6 +25,10 @@ public class BlogPostRepository {
         return blogPosts;
     }
 
+    public BlogPost readTxtBlogPost(String title) throws FileNotFoundException {
+        return readTxtFile(title);
+    }
+
     public BlogPost readTxtFile(String filename) throws FileNotFoundException {
         String title = filename;
         List<String> body = new ArrayList<>();
