@@ -18,6 +18,5 @@ public class BlogPostService {
 
     public List<BlogPost> getAllBlogPosts() throws FileNotFoundException {
         return repository.readAllTxtBlogPosts();
-        // return Arrays.asList(new BlogPost("Title vitle", "A tale of mole bole"));
     }
 }
