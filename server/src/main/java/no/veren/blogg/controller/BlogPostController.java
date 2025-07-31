@@ -12,6 +12,7 @@ import no.veren.blogg.model.BlogPost;
 import no.veren.blogg.service.BlogPostService;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*")
 public class BlogPostController {
 
     private final BlogPostService service;
@@ -20,7 +21,6 @@ public class BlogPostController {
         this.service = service;
     }
 
-    @CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*")
     @GetMapping(value = "/posts")
     public List<BlogPost> getAllBlogPosts() {
         try {
