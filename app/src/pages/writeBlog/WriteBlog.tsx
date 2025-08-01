@@ -15,23 +15,29 @@ function WriteBlog() {
         className="col align-center full-width"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <label htmlFor="tittel" className="col full-width">
+        <label htmlFor="title" className="col full-width">
           Tittel
           <input
-            id="tittel"
+            id="title"
             type="text"
             placeholder="En fantastisk tittel"
-            className="full-width"
+            className="titleInput"
             {...register("title")}
           />
         </label>
-        <textarea {...register("body")} />
-        <span className="row space-between full-width">
+
+        <label htmlFor="blog-post-text" className="col full-width">
+          <textarea id="blog-post-text" {...register("body")} />
+        </label>
+
+        <span className="passcode-submit-container">
           <label htmlFor="secret-code" className="col">
             Hemmelig kode
             <input id="secret-code" type="text" {...register("passcode")} />
           </label>
-          <button type="submit">Send inn </button>
+          <button id="submit-button" type="submit">
+            Send inn{" "}
+          </button>
         </span>
       </form>
     </main>
