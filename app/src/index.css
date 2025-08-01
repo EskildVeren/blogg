@@ -6,6 +6,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
+  width: 100wv;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,11 +14,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-:root > #root {
+#root {
   width: 50rem;
   max-width: 90%;
+  display: flex;
   gap: 2rem;
   align-items: center;
+  flex-direction: column;
 }
 
 body {
@@ -63,9 +66,20 @@ nav {
   gap: 0.5rem;
   text-align: center;
   justify-content: center;
+  width: 100%;
+  margin-top: 1em;
 }
 
 nav > a {
   text-decoration: none;
-  color: white;
+  color: #dddddd;
+  font-weight: bold;
+  line-height: 100%;
+}
+
+nav > hr {
+  height: 1rem;
+  margin: 0;
+  border-color: #bbbbbb;
+  border-style: solid;
 }

@@ -10,7 +10,7 @@ import {
 
 function ResumePage() {
   return (
-    <>
+    <main>
       <Navbar />
       <ProjectSection projects={getMockProjects()} />
       <ResumeSection
@@ -29,7 +29,7 @@ function ResumePage() {
         resumeData={getCourses()}
         sectionTitle={"Også har jeg et par kurs da"}
       />
-    </>
+    </main>
   );
 }
 
