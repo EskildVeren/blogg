@@ -27,6 +27,7 @@ body {
   align-items: center;
   width: 100vw;
   min-height: 100vh;
+  padding-bottom: 10em;
 }
 
 .col {
@@ -47,11 +48,12 @@ body {
   align-items: center;
 }
 
-.space-around {
+.space-between {
   justify-content: space-between;
 }
-.space-between {
+.space-around {
   justify-content: space-around;
+  padding: 0;
 }
 .full-width {
   width: 100%;

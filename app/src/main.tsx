@@ -6,7 +6,7 @@ import BlogPage from "./pages/blog/BlogPage.tsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import IndexPage from "./pages/index/Index.tsx";
 import ResumePage from "./pages/resume/ResumePage.tsx";
-import WriteBlog from "./pages/writeBlog/writeBlog.tsx";
+import WriteBlog from "./pages/writeBlog/WriteBlog.tsx";
 
 
 const queryClientProvider = new QueryClient();

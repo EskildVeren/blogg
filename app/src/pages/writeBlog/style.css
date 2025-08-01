@@ -4,6 +4,10 @@ main {
   gap: 2rem;
 }
 textarea {
-  width: 100%;
+  width: calc(100% - 8px);
   aspect-ratio: 1 / 2;
+  outline: none;
+}
+form {
+  gap: 2rem;
 }
