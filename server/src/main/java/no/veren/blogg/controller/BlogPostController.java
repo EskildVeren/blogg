@@ -1,12 +1,15 @@
 package no.veren.blogg.controller;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import no.veren.blogg.model.BlogPost;
@@ -39,6 +42,16 @@ public class BlogPostController {
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
             return new BlogPost("En feil har skjedd", Arrays.asList("En slitsom feil..."));
+        }
+    }
+
+    @PutMapping(value = "/posts/{blogPostTitle}")
+    public void createBlogPost(@PathVariable String blogPostTitle, @RequestBody List<String> body,
+            @RequestBody String passcode) {
+        try {
+            service.writeBlogPost(blogPostTitle, body, passcode);
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
         }
     }
 }

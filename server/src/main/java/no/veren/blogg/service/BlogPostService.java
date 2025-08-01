@@ -1,6 +1,7 @@
 package no.veren.blogg.service;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -22,5 +23,9 @@ public class BlogPostService {
 
     public BlogPost getBlogPost(String title) throws FileNotFoundException {
         return repository.readTxtBlogPost(title);
+    }
+
+    public void writeBlogPost(String title, List<String> body, String passcode) throws IOException {
+        repository.createBlogPostTxtFile(title, body, passcode);
     }
 }
