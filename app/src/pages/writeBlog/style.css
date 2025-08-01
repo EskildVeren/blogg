@@ -1,0 +1,9 @@
+main {
+  width: 50rem;
+  max-width: 90%;
+  gap: 2rem;
+}
+textarea {
+  width: 100%;
+  aspect-ratio: 1 / 2;
+}

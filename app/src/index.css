@@ -13,9 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
+:root > #root {
+  width: 50rem;
+  max-width: 90%;
+  gap: 2rem;
   align-items: center;
 }
 
@@ -26,4 +27,43 @@ body {
   align-items: center;
   width: 100vw;
   min-height: 100vh;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.space-around {
+  justify-content: space-between;
+}
+.space-between {
+  justify-content: space-around;
+}
+.full-width {
+  width: 100%;
+}
+nav {
+  display: flex;
+  gap: 0.5rem;
+  text-align: center;
+  justify-content: center;
+}
+
+nav > a {
+  text-decoration: none;
+  color: white;
 }
