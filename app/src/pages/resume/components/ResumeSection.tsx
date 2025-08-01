@@ -18,7 +18,6 @@ function ResumeSection(props: {
 }
 
 function ResumeEntry(props: { data: ResumeEntry | ResumeEntryReapeating }) {
-  console.log(props.data);
   const data = props.data as ResumeEntry;
   return (
     <a className="card card-column clickable-enlarge" href={data.jobInfoUrl}>

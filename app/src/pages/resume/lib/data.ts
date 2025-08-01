@@ -33,7 +33,8 @@ export function getJobs() {
       endTime: "Desember 2023",
       description:
         "Bisto med å rette øvinger og hjelpe studenter i emnet MA0001 Matematikk Grunnkurs (sjekk emnekode)",
-      jobInfoUrl: "",
+      jobInfoUrl:
+        "https://i.ntnu.no/wiki/-/wiki/Norsk/Studentassistent+ved+NTNU",
     },
     {
       title: "Assistent",
@@ -42,7 +43,8 @@ export function getJobs() {
       endTime: "Juni 2022",
       description:
         "Ledet flere klasser gjennom en gøyal uke med matte, koding og fysisk aktivitet",
-      jobInfoUrl: "",
+      jobInfoUrl:
+        "https://sommerskolenoslo.no/mange-forskjellige-stillinger-i-sommerskolen-oslo/",
     },
     {
       title: "Kodeinstruktør",
@@ -51,7 +53,8 @@ export function getJobs() {
       endTime: "April 2018",
       description:
         "Ledet kurs for ulike klasser på ASK, der elevene lærte Scratch",
-      jobInfoUrl: "",
+      jobInfoUrl:
+        "https://www.nkul.no/wp-content/uploads/2017/presentasjoner/s3h-programmering-i-barneskolen.pdf",
     },
   ];
   return data;
@@ -66,7 +69,7 @@ export function getVolunteerings() {
       endTime: "Juni 2024",
       description:
         "I to år under bacheloren var jeg medlem i komiteen. Her skrev jeg flere artikler, og tok på meg noen administrative roller",
-      jobInfoUrl: "",
+      jobInfoUrl: "https://online.ntnu.no/applications",
     },
     {
       title: "Frivillig i Infobod",
@@ -75,7 +78,7 @@ export function getVolunteerings() {
       endTime: "August 2022",
       description:
         "Under øyafestivalen satt jeg i inforboden, der jeg gav informasjon til festivaldeltakerne angående hvaenn de lurte på",
-      jobInfoUrl: "",
+      jobInfoUrl: "https://www.oyafestivalen.no/frivillig?lang=no",
     },
     {
       title: "Speider",
@@ -84,7 +87,7 @@ export function getVolunteerings() {
       endTime: "Juli 2023",
       description:
         "Jeg har vært speider i lang tid, og har deltatt som vanlig speider, patruljeører, leder og stab på roverleir",
-      jobInfoUrl: "",
+      jobInfoUrl: "https://speiding.no/",
     },
   ];
   return data;
@@ -99,7 +102,8 @@ export function getCourses() {
       endTime: "Desember 2023",
       description:
         "Dette er et kurs jeg tok under første perioden jeg var læringsassistent. Dette pedagogiske kurset hjalp i jobben ved å vise til hva man bør og ikke bør gjøre som læringsassistent, fra perspektivet til en som trenger hjelp",
-      jobInfoUrl: "",
+      jobInfoUrl:
+        "https://i.ntnu.no/wiki/-/wiki/Norsk/LAOS+-+Oppl%C3%A6ring+for+l%C3%A6ringsassistenter",
     },
     {
       title: "Minilederkurs",
@@ -108,7 +112,7 @@ export function getCourses() {
       endTime: "Juli 2018",
       description:
         "I ett år var jeg med i kirka, der jeg hjalp til med å lede konfirmeringsprogrammet for kullet som kom etter meg. Jeg satt også i konfirmantstyret dette året",
-      jobInfoUrl: "",
+      jobInfoUrl: "https://www.letsreg.com/no/event/milk18#init",
     },
   ];
   return data;

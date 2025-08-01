@@ -40,6 +40,7 @@ function getMockProjects() {
       timePeriod: "Vår 2024",
       description:
         "Min bachelorgruppe tok et oppdrag fra Nordic Semiconductor, der vi fikk tildelt en tolv-sidet terning med sensorer som skulle brukes til å måle hva eieren gjorde i løpet av en dag. Hver terningside representerte en aktivitet, der aktiviteten målt var avhengig av hvilken terningside som var opp. Produktet støttet aktiviteter som ble målt ved telling eller tidtaking. Under dette prosjektet jobbet jeg med et teammedlem med å bygge en back-end ved bruk av AWS og TypeScript. Under prosjektet tilegnet jeg meg tekniske ferdigheter om skyplatformer og back-end utvikling. Jeg fikk også erfaring med å jobbe med et velsmurt team",
+      projectLink: "https://github.com/IT2901Nordic2024/backend",
       technologies: [
         {
           name: "TypeScript",
@@ -93,6 +94,7 @@ function getMockProjects() {
       timePeriod: "Høsten 2023",
       description:
         "I emnet IT2810 - Webutvikling lagde min gruppe en nettside som lar deg finne din nye favorittdrink. Nettsiden støtter søk, filtrering, sortering og dynamisk innlasting av en stor mengde drinker. Om du prøver ut en drink du digger kan du legge igjen en anmeldelse, og rangere drinken mellom en og fem martiniglass",
+      projectLink: "https://github.com/EskildVeren/drinksDB",
       technologies: [
         {
           name: "React",

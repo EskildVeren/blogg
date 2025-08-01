@@ -9,7 +9,7 @@ function WriteBlog() {
     console.log(data);
 
   return (
-    <main className="col align-center">
+    <main className="col align-center full-width">
       <Navbar />
       <form
         className="col align-center full-width"
@@ -36,7 +36,7 @@ function WriteBlog() {
             <input id="secret-code" type="text" {...register("passcode")} />
           </label>
           <button id="submit-button" type="submit">
-            Send inn{" "}
+            Send inn
           </button>
         </span>
       </form>

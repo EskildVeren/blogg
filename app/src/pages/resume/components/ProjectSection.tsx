@@ -16,7 +16,10 @@ function ProjectSection(props: { projects: ProjectEntry[] }) {
 function ProjectCard(props: { data: ProjectEntry }) {
   const data = props.data;
   return (
-    <div className="card technology-card card-column">
+    <a
+      href={props.data.projectLink}
+      className="card technology-card card-column clickable-enlarge"
+    >
       <h2>{data.title}</h2>
       <p>{data.timePeriod}</p>
       <p>{data.description}</p>
@@ -25,7 +28,7 @@ function ProjectCard(props: { data: ProjectEntry }) {
           return <ResumeTechnology tech={tech} />;
         })}
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -49,6 +52,7 @@ export interface ProjectEntry {
   timePeriod: string;
   description: string;
   technologies: ResumeTechnology[];
+  projectLink: string;
 }
 
 export interface ResumeTechnology {
