@@ -2,11 +2,16 @@ import "./style.css";
 import Navbar from "../../components/Navbar";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import type { BlogPostFormInput } from "../../lib/types";
+import { useMutation } from "@tanstack/react-query";
+import { createPost } from "./lib/api";
 
 function WriteBlog() {
+  const mutation = useMutation({ mutationFn: createPost });
   const { register, handleSubmit } = useForm<BlogPostFormInput>();
-  const onSubmit: SubmitHandler<BlogPostFormInput> = (data) =>
+  const onSubmit: SubmitHandler<BlogPostFormInput> = (data) => {
     console.log(data);
+    mutation.mutate(data);
+  };
 
   return (
     <main className="col align-center full-width">

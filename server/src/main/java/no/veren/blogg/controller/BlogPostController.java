@@ -8,11 +8,12 @@ import java.util.List;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import no.veren.blogg.model.BlogPost;
+import no.veren.blogg.model.BlogPostInput;
 import no.veren.blogg.service.BlogPostService;
 
 @RestController
@@ -45,11 +46,12 @@ public class BlogPostController {
         }
     }
 
-    @PutMapping(value = "/posts/{blogPostTitle}")
-    public void createBlogPost(@PathVariable String blogPostTitle, @RequestBody List<String> body,
-            @RequestBody String passcode) {
+    @CrossOrigin(origins = "http://localhost:5173", allowedHeaders = "*")
+    @PostMapping(value = "/posts/{blogPostTitle}", consumes = { "application/json" })
+
+    public void createBlogPost(@PathVariable String blogPostTitle, @RequestBody BlogPostInput blogPost) {
         try {
-            service.writeBlogPost(blogPostTitle, body, passcode);
+            service.writeBlogPost(blogPostTitle, blogPost.body(), blogPost.passcode());
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

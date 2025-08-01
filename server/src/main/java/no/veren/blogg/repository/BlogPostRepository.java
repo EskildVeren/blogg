@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
@@ -58,13 +59,16 @@ public class BlogPostRepository {
                 .toList();
     }
 
-    public void createBlogPostTxtFile(String title, List<String> body, String passcode) throws IOException {
+    public void createBlogPostTxtFile(String title, String body, String passcode) throws IOException {
         // TODO: Boy add some security
-        if (!passcode.equals("My secret passcode")) {
+        if (!passcode.equals("My secret passcode") && false) {
+            System.out.println("Wrong passcode");
             return;
         }
         // Handle cases where title already exists
         if (getAllTxtFileTitles().contains(title)) {
+            System.out.println("Wrong passcode");
+
             return;
         }
         // Get the correct date
@@ -73,7 +77,7 @@ public class BlogPostRepository {
         String writtenDate = currentTime.format(formatter);
 
         System.out.println("Dato i dag: " + writtenDate);
-        BlogPost blogPost = new BlogPost(title, body, writtenDate, writtenDate);
+        BlogPost blogPost = new BlogPost(title, Arrays.asList(body), writtenDate, writtenDate);
         writeBlogTxtFile(blogPost);
 
     }
@@ -83,7 +87,7 @@ public class BlogPostRepository {
     }
 
     private void writeBlogTxtFile(BlogPost blogPost) throws IOException {
-        FileWriter writer = new FileWriter("./blogPosts/" + blogPost.getTitle());
+        FileWriter writer = new FileWriter("./blogPosts/" + blogPost.getTitle() + ".txt");
         for (String paragraph : blogPost.getBody()) {
             writer.write(paragraph);
         }

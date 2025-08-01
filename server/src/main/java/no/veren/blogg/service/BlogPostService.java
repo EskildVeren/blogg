@@ -25,7 +25,7 @@ public class BlogPostService {
         return repository.readTxtBlogPost(title);
     }
 
-    public void writeBlogPost(String title, List<String> body, String passcode) throws IOException {
+    public void writeBlogPost(String title, String body, String passcode) throws IOException {
         repository.createBlogPostTxtFile(title, body, passcode);
     }
 }

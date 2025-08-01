@@ -1,6 +1,6 @@
 export type BlogPostFormInput = {
   title: string;
-  body: string[];
+  body: string;
   passcode: string;
 };
 
