@@ -1,5 +1,8 @@
 .blog-post-container {
   width: 30rem;
+  padding: 0 1.5em 0 1.5em;
+  border: 1px solid white;
+  border-radius: 10px;
 }
 .blog-post-title {
   text-align: left;

@@ -9,7 +9,6 @@ function BlogPage() {
     queryKey: ["todos"],
     queryFn: getPosts,
   });
-  console.log(data);
 
   if (isPending) {
     return <div>Pending</div>;
