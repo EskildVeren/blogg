@@ -2,8 +2,16 @@
   width: 30rem;
   padding: 0 1.5em 0 1.5em;
   border: 1px solid white;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 .blog-post-title {
   text-align: left;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.blog-post-date-mark {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 1px;
 }

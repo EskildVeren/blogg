@@ -42,12 +42,27 @@ public class BlogPostRepository {
         String path = "./blogPosts/" + title + ".txt";
         File file = new File(path);
         Scanner scanner = new Scanner(file);
+        String postedDay = extractPostedDay(scanner.nextLine(), body);
+
         while (scanner.hasNextLine()) {
             body.add(scanner.nextLine());
         }
 
         scanner.close();
-        return new BlogPost(title, body);
+        return new BlogPost(title, body, postedDay, postedDay);
+    }
+
+    private String extractPostedDay(String metaDataLine, List<String> body) {
+        String[] metadata = metaDataLine.split(",");
+        if (!metadata[0].equals("metadata")) {
+            body.add(metaDataLine);
+            return null;
+        }
+        try {
+            return metadata[1];
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     private List<String> getAllTxtFileTitles() {
@@ -88,7 +103,7 @@ public class BlogPostRepository {
 
     private void writeBlogTxtFile(BlogPost blogPost) throws IOException {
         FileWriter writer = new FileWriter("./blogPosts/" + blogPost.getTitle() + ".txt");
-        writer.write("Written " + blogPost.getDateCreated() + "\n");
+        writer.write("metadata," + blogPost.getDateCreated() + "\n");
         for (String paragraph : blogPost.getBody()) {
             writer.write(paragraph + "\n");
         }
