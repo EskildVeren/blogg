@@ -1,10 +1,10 @@
-export type BlogPost = {
+export type BlogPostData = {
   title: string;
   body: string[];
 };
-export function isBlogPost(data: unknown): data is BlogPost {
+export function isBlogPost(data: unknown): data is BlogPostData {
   return (
-    (data as BlogPost).title !== undefined &&
-    (data as BlogPost).body !== undefined
+    (data as BlogPostData).title !== undefined &&
+    (data as BlogPostData).body !== undefined
   );
 }

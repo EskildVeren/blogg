@@ -1,9 +1,9 @@
 import "./style.css";
 import Navbar from "../../components/Navbar";
 import { useForm, type SubmitHandler } from "react-hook-form";
-import type { BlogPostFormInput } from "../../lib/types";
 import { useMutation } from "@tanstack/react-query";
 import { createPost } from "./lib/api";
+import type { BlogPostFormInput } from "./lib/types";
 
 function WriteBlog() {
   const mutation = useMutation({ mutationFn: createPost });
