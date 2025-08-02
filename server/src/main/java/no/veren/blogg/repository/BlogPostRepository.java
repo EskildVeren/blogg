@@ -88,8 +88,9 @@ public class BlogPostRepository {
 
     private void writeBlogTxtFile(BlogPost blogPost) throws IOException {
         FileWriter writer = new FileWriter("./blogPosts/" + blogPost.getTitle() + ".txt");
+        writer.write("Written " + blogPost.getDateCreated() + "\n");
         for (String paragraph : blogPost.getBody()) {
-            writer.write(paragraph);
+            writer.write(paragraph + "\n");
         }
         writer.close();
     }
