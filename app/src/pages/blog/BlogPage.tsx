@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { getPosts } from "./lib/api";
 import "./style.css";
 import Navbar from "../../components/Navbar";
+import BlogPost from "./components/BlogPost";
 
 function BlogPage() {
   const { isPending, isError, data, error } = useQuery({
@@ -23,21 +24,9 @@ function BlogPage() {
   return (
     <>
       <Navbar />
-      {data.map((blogPost) => {
-        console.log(blogPost);
-        console.log("Ma");
-        console.log("oiia", blogPost.body[1]);
-
-        return (
-          <div className="blog-post-container" key={blogPost.title}>
-            <h2 className="blog-post-title">{blogPost.title}</h2>
-
-            {blogPost.body.map((paragraph) => {
-              return <p>{paragraph}</p>;
-            })}
-          </div>
-        );
-      })}
+      {data.map((blogPost) => (
+        <BlogPost blogPost={blogPost} />
+      ))}
     </>
   );
 }
