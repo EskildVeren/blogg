@@ -1,4 +1,4 @@
-import type { BlogPostFormInput } from "../../../lib/types";
+import type { BlogPostFormInput } from "./types";
 
 export async function createPost(blogPost: BlogPostFormInput) {
   const res = await fetch("http://localhost:8080/posts/" + blogPost.title, {
