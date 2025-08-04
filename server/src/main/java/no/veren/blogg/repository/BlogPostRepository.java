@@ -66,12 +66,16 @@ public class BlogPostRepository {
     }
 
     private List<String> getAllTxtFileTitles() {
-        return Stream.of(new File("./blogPosts").listFiles())
-                .parallel()
-                .map(File::getName)
-                .filter(fn -> fn.endsWith(".txt"))
-                .map(fn -> fn.substring(0, fn.length() - 4))
-                .toList();
+        try {
+            return Stream.of(new File("./blogPosts").listFiles())
+                    .parallel()
+                    .map(File::getName)
+                    .filter(fn -> fn.endsWith(".txt"))
+                    .map(fn -> fn.substring(0, fn.length() - 4))
+                    .toList();
+        } catch (Exception e) {
+            return new ArrayList<>();
+        }
     }
 
     public void createBlogPostTxtFile(String title, String body, String passcode) throws IOException {
