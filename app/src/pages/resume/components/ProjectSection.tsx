@@ -1,5 +1,3 @@
-import "../style.css";
-
 function ProjectSection(props: { projects: ProjectEntry[] }) {
   return (
     <>

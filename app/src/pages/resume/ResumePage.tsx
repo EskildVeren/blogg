@@ -7,11 +7,22 @@ import {
   getJobs,
   getVolunteerings,
 } from "./lib/data";
+import "./style.css";
 
 function ResumePage() {
   return (
     <main>
       <Navbar />
+      <h2 className="section-title">Dette er meg</h2>
+      <div className="introduction-container">
+        <p>
+          Eller, bildet til høyre er da egentlig ikke meg, men bare et
+          midlertidig bilde frem til jeg har et bra bilde av meg selv. Om du ser
+          for deg en mann med skjegg og viker høyere enn frognergutter er
+          tirsdagskveldene, så vil nok denne mannen være ganske lik meg.
+        </p>
+        <img src="./stellan.jpg" alt="image of me" />
+      </div>
       <ProjectSection projects={getMockProjects()} />
       <ResumeSection
         resumeData={getEducation()}

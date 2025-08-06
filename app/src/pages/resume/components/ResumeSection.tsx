@@ -1,5 +1,4 @@
 import type { ResumeEntry, ResumeEntryReapeating } from "../lib/ResumeEntry";
-import "../style.css";
 
 function ResumeSection(props: {
   resumeData: (ResumeEntry | ResumeEntryReapeating)[];

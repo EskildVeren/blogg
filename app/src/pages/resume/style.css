@@ -1,6 +1,21 @@
+.introduction-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.introduction-container > img {
+  height: 400px;
+  object-fit: contain;
+}
+.introduction-container > p {
+  padding: 0;
+  text-align: left;
+}
 .section-title {
   text-align: center;
   margin-top: 5em;
+  margin-bottom: 2em;
 }
 .card-container {
   margin-top: 3em;
