@@ -1,0 +1,14 @@
+services:
+  server:
+    build: ./server
+    container_name: my_website_backend
+    ports:
+      - 8080:8080
+  frontend:
+    build: ./app
+    container_name: my_website_frontend
+    ports:
+      - 5173:5173
+# docker compose build
+# docker compose push
+# docker compose up
